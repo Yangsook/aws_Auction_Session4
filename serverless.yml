@@ -1,5 +1,5 @@
 service: auction-service
-  
+
 plugins:
   - serverless-bundle
   - serverless-pseudo-parameters
@@ -26,6 +26,12 @@ functions:
       - http:
           method: POST
           path: /auction
+  getAuctions:
+    handler: src/handlers/getAuctions.handler
+    events:
+      - http:
+          method: GET
+          path: /auctions
 
 custom:
   AuctionsTable:
@@ -35,4 +41,3 @@ custom:
   #   linting: false
 
 
-  
