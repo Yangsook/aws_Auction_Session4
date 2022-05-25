@@ -43,7 +43,3 @@ custom:
   AuctionsTable:
     name: !Ref AuctionsTable
     arn: !GetAtt AuctionsTable.Arn
-  # bundle:
-  #   linting: false
-
-
